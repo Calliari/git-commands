@@ -1,0 +1,20 @@
+# Clone the first remote repo (origin)
+git clone git@github.com:sample-1/sample-repo-1.git
+
+# chech the heads and origin
+git remote -v
+#origin git@github.com:sample-1/sample-repo-1.git (fetch)
+#origin git@github.com:sample-1/sample-repo-1.git (push)
+
+
+# Add Upstream Remote
+$ git remote add upstream git@github.com:sample-1/sample-repo-2-forked-from-repo-1.git
+
+# chech the heads and origin again - but now with multiple heads
+origin    git@github.com:sample-1/sample-repo-1.git (fetch)
+origin    git@github.com:sample-1/sample-repo-1.git (push)
+upstream  git@github.com:sample-1/sample-repo-2-forked-from-repo-1.git (fetch)
+upstream  git@github.com:sample-1/sample-repo-2-forked-from-repo-1.git (push)
+
+
+NOT COMPLTED YET

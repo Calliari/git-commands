@@ -9,3 +9,22 @@ git merge stage
 git push origin master
 # or
 git push origin master --force
+
+
+
+
+
+### ======== Another example
+'Overwrite "TOPS-5041" with "master" branch'
+
+git checkout master
+git merge -s ours --no-commit TOPS-5041
+git commit -m 'Overwrite "TOPS-5041" with "master" branch'  # Add a message regarding the replacement that you just did
+git checkout TOPS-5041
+git merge master
+
+# Push the merge updates
+
+git push origin TOPS-5041
+# or
+git push origin TOPS-5041 --force

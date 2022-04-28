@@ -18,7 +18,7 @@ git tag -a -m "Tag version 0.0.1, update providers to be v 2.68.0" 0.0.1
 # push the tag to the repo 
 git push origin 0.0.1
 
-### Now the code pushed to a maste branch is tagged with '0.0.1'
+### Now the code pushed to a tag '0.0.1' is linked to this master commit
 
 ====== New tag with change =================================
 # Create a new branch from tag v1.1

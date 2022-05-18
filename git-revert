@@ -1,0 +1,8 @@
+# Revert a commit pushed to the repo "this is not like going back in time", this command will create a new commit with the reverted code on it
+echo "this is a wrong code - xxxtttxxx222" > app.txt
+
+git add app.txt; 
+git commit -m "important code into 'app.txt' file"
+
+#### Now we want to rever to the changes as the code is pushed wrongly.;
+git revert HEAD

@@ -44,6 +44,7 @@ git config user.email 'bob@example.com'
 
 # checking the project-local git-config
 git config --global user.name
+git config --global user.email
 ```
 
 

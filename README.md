@@ -1,4 +1,4 @@
-### Git commands
+## Git commands
 Install git on the machine is needed.
 ```
 sudo apt install git  # Forked from Debian architecture - Linux
@@ -47,8 +47,12 @@ git config --global user.name
 git config --global user.email
 ```
 
-# git-commands
-Some useful commands that I think is very useful
+##### Some commands that I think is very useful
+```
+# clone local repos
+git clone project-name1 cloned-project-name1
+```
+
 
 ##### Starting a new project with git
 ```

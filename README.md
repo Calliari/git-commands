@@ -36,7 +36,7 @@ git config --global user.email 'bob@example.com'
 # Optional set the editor for git 
 git config --global core.editor '/usr/bin/vim'
 ```
-##### In case a non 'global' config is needed, change the dir and run the commands:
+##### In case a 'local-project' git config is needed, change the to the project's dir and run the commands:
 ```
 cd PATH/TO/PROJECT
 git config user.name 'bob'

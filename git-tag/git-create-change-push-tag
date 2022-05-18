@@ -1,3 +1,5 @@
+https://git-scm.com/docs/git-tag
+
 # checkout from the branch (master)
 git checkout master
 
@@ -12,13 +14,19 @@ git push origin master
 # git check tags
 git tag -l
 
-# create a tag from the current code on the master branch
-git tag -a -m "Tag version 0.0.1, update providers to be v 2.68.0" 0.0.1
+# create an annotate (-a) tag from the current code on the master branch with a message (-m)
+git tag -a v0.0.1 -m "Tag version v0.0.1, update providers to be version 2.68.0"
+
+# Check the tag commited
+git show v0.0.1
+
+# Check the tags created
+git tag
 
 # push the tag to the repo 
-git push origin 0.0.1
+git push origin v0.0.1
 
-### Now the code pushed to a tag '0.0.1' is linked to this master commit
+### Now the code has been pushed to a tag 'v0.0.1' is linked to this master commit
 
 ====== New tag with change =================================
 # Create a new branch from tag v1.1
@@ -28,14 +36,17 @@ git checkout -b newbranch v1.1
 vim FILE_NAME
 
 # Create a new tag from your work
-git tag -a -m "Tag version 1.1.1, a bugfix release" v1.1.1
+git tag -a v1.1.1 -m "Tag version 1.1.1, a bugfix release"
 
 # push the tag to remote repo with the changes made
 git push origin v1.1.1
 
 =================================================================
-# delete tag local
-git push -d origin 0.0.2
+# delete tag local repo
+git tag -d v0.0.2
 
-# delete tag remote 
-git push --delete origin 0.0.1
+# delete tag remote repo
+git push -d origin v0.0.2
+
+# delete tag remote repo
+git push --delete origin v0.0.1

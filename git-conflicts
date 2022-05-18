@@ -1,16 +1,15 @@
 #### Trying to resolve git merge 'conflicts'
 
-```
+
 git checkout development   # in the branch development
 git merge features/task123 # trying to get the code from 'features/task123' branch into 'development' branch 
 
+==================================================================
 CONFLICT (add/add): Merge conflict in test.txt
 Auto-merging test.txt
 Automatic merge failed; fix conflicts and then commit the result.
-```
+==================================================================
 
 # Abort the merge to get back how it was before running '$ git merge features/task123' on the 'development' branch
-```
 git merge --abort
 
-```

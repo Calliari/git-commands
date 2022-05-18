@@ -1,0 +1,17 @@
+The git 'rebase' and 'merge' is similar
+
+# creating a new branch from another
+git checkout -b development master # creating 'development' branch from 'master' branch 
+
+# check to the new branch just created 'development'
+git checkout development
+
+# add/change file contents on the 'development' branch 
+echo "code 2" >> app.txt
+
+# add and commit the changes
+git add app.txt; git commit -m "new code changes on the development branch"
+
+# Now use the git 'rebase'command
+git checkout master
+git rebase development

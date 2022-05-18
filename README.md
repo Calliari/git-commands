@@ -47,8 +47,6 @@ git config --global user.name
 git config --global user.email
 ```
 
-
-
 # git-commands
 Some useful commands that I think is very useful
 

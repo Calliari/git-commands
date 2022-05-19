@@ -49,12 +49,33 @@ git config --global user.email
 
 ##### Some commands that I think is very useful
 ```
-# clone local repos
+# clone repos from one to another locally
 git clone project-name1 cloned-project-name1
 ```
 
+##### this is an example '~/.ssh/config' configuration
+```
+# Make sure the public key is added on the code hosting platform (Bitbucket, GitHub, CodeCommit, Gitlab) 
+Host github.com
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_github
+
+```
+
+##### Testing and cloning
+```
+# Test the SSH connection with github 
+ssh -T git@github.com   
+ 
+# Clone remote repos
+git clone git@github.com:Calliari/git-commands.git      
+git clone git@ssh.github.com:Calliari/git-commands.git. # add 'ssh' before '.github.com' if the router has firewall's rules to block cloning remote repos
+```
 
 ##### Starting a new project with git
 ```
 git init project-name
 ```
+
+

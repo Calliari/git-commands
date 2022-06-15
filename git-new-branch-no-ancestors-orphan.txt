@@ -1,0 +1,7 @@
+# Create a new branch named with no ancestors
+git checkout --orphan foo-new-branch
+
+# Unstage all the files in your working tree.
+git rm --cached $(git ls-files)
+
+# The files and dirs are still on the local machine but they are not added onto the git's history or git stages.

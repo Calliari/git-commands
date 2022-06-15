@@ -16,6 +16,8 @@ git tag -l
 
 # create an annotate (-a) tag from the current code on the master branch with a message (-m)
 git tag -a v0.0.1 -m "Tag version v0.0.1, update providers to be version 2.68.0"
+# or
+git tag 0.1
 
 # Check the tag commited
 git show v0.0.1
@@ -24,7 +26,9 @@ git show v0.0.1
 git tag
 
 # push the tag to the repo 
-git push origin v0.0.1
+git push origin v0.0.1 
+# or 
+git push --follow-tags
 
 ### Now the code has been pushed to a tag 'v0.0.1' is linked to this master commit
 
@@ -37,6 +41,8 @@ vim FILE_NAME
 
 # Create a new tag from your work
 git tag -a v1.1.1 -m "Tag version 1.1.1, a bugfix release"
+# or
+git tag 0.1
 
 # push the tag to remote repo with the changes made
 git push origin v1.1.1

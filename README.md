@@ -54,13 +54,19 @@ git clone project-name1 cloned-project-name1
 ```
 
 ##### this is an example '~/.ssh/config' configuration
+Make sure the public key is added on the code hosting platform (Bitbucket, GitHub, CodeCommit, Gitlab) 
 ```
-# Make sure the public key is added on the code hosting platform (Bitbucket, GitHub, CodeCommit, Gitlab) 
+# AWS-CodeCommit SSH-key-ID config
 Host github.com
     Hostname github.com
 #    Hostname ssh.github.com # if the router has firewall rules to block default clone command
     User git
     IdentityFile ~/.ssh/id_rsa_github
+
+# AWS-CodeCommit SSH-key-ID config
+Host git-codecommit.*.amazonaws.com
+  User APKAEIBAERJR2EXAMPLE 
+  IdentityFile ~/.ssh/aws_codecommit_rsa
 
 ```
 

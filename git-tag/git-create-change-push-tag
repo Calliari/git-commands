@@ -39,7 +39,7 @@ git checkout -b newbranch v1.1
 # Do some work and commit it
 vim FILE_NAME
 
-# Create a new tag from your work
+# Create a new tag from your work with the message (Tag version 1.1.1, a bugfix release)
 git tag -a v1.1.1 -m "Tag version 1.1.1, a bugfix release"
 # or
 git tag 0.1

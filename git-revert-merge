@@ -1,4 +1,4 @@
-# Revert a MERGE PR "this is not like going back in time", this command will create a new commit with the reverted code on it.
+# Revert a MERGE PR 
 #####################################################################################################################
 
 $> echo "this is a wrong code - xxxtttxxx222" > app.txt
@@ -7,37 +7,42 @@ $> git add app.txt;
 $> git commit -m "important code into 'app.txt' file"
 $> git push dev-branch
 
+#####################################################################################################################
+#####################################################################################################################
+# Revert a MERGED PR - "with revert to a commit" (this command will create a new commit with the reverted code on it)
 ## After the MERGE (dev-branch into master) get the commmit ID generated from the merged pull request
-----------------------------------------------------------------------
-$> git log -2 | grep ''
 
+$> git log -2 | grep ''
+------------------------------
 commit gdkncal749933bkcjabscjojnc
 Merge: 44s778w df5338
-Author: Osvaldo Caliari <Calliari@users.noreply.github.com>
+Author: user-Name user-Surname <email-sample@users.noreply.github.com>
 Date:   Thu Jan 12 13:09:10 2023 +0000
 
-    Merge pull request #2 from Calliari/feature-v1
+    Merge pull request #2 from feature-v1
 
     feature-v1
-
-----------------------------------------------------------------------
+------------------------------
 #### Now we want to rever to the changes based on the merge-commit-id;
 $> git revert -m 1 gdkncal749933bkcjabscjojnc
 
 # push the reverted commmit 
 $> git push origin master 
 
-
 #####################################################################################################################
-# Revert a MERGED PR - "undo the merge"
-## Get the merged commit ID from the command:
+#####################################################################################################################
+# Revert a MERGED PR - "undo the merge" ("this is like going back in time")
+## After the MERGE (dev-branch into master) get the commmit ID generated from the merged pull request
+------------------------------
+$> git reflog -3 | grep ''
 
-$> git reflog -4 
- #or 
-$> git log -4
+a91f8a0 HEAD@{0}: pull origin master: Fast-forward
+teg9988 HEAD@{1}: checkout: moving from feature-v1 to master
+455h5687 HEAD@{2}: commit: pushing a new feature-v1
 
+------------------------------
+#### Now we want to rever to the changes based on the merge-commit-id before the merged;
+git reset --merge teg9988xxxxxyyyyyyxxx
 
-git reset --merge commit ID
-
-
-git push -f origin master
+# push the reverted commmit 
+$> git push -f origin master

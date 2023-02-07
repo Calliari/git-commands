@@ -1,9 +1,11 @@
-# Revert a MERGE PR "this is not like going back in time", this command will create a new commit with the reverted code on it
-echo "this is a wrong code - xxxtttxxx222" > app.txt
+# Revert a MERGE PR "this is not like going back in time", this command will create a new commit with the reverted code on it.
+#####################################################################################################################
 
-git add app.txt; 
-git commit -m "important code into 'app.txt' file"
-git push dev-branch
+$> echo "this is a wrong code - xxxtttxxx222" > app.txt
+
+$> git add app.txt; 
+$> git commit -m "important code into 'app.txt' file"
+$> git push dev-branch
 
 ## After the MERGE (dev-branch into master) get the commmit ID generated from the merged pull request
 ----------------------------------------------------------------------
@@ -20,7 +22,22 @@ Date:   Thu Jan 12 13:09:10 2023 +0000
 
 ----------------------------------------------------------------------
 #### Now we want to rever to the changes based on the merge-commit-id;
-git revert -m 1 gdkncal749933bkcjabscjojnc
+$> git revert -m 1 gdkncal749933bkcjabscjojnc
 
 # push the reverted commmit 
-git push origin master 
+$> git push origin master 
+
+
+#####################################################################################################################
+# Revert a MERGED PR - "undo the merge"
+## Get the merged commit ID from the command:
+
+$> git reflog -4 
+ #or 
+$> git log -4
+
+
+git reset --merge commit ID
+
+
+git push -f origin master

@@ -1,11 +1,26 @@
-Delete the remote branch CMD
-# for remote 'TEST-123' branch
-# checkot to another branch first i.e: git checkout dev
+Delete the "locally" and "remote" branch CMD:
+The "-d" option will delete the branch only if it has already been pushed and merged with the remote branch. 
+Use "-D" instead if you want to force the branch to be deleted, even if it hasn't been pushed or merged yet.
+
+# delete branch locally
+git branch -d localBranchName
+  #or
+git branch -D localBranchName
+
+# delete branch remote
+git push origin --delete remoteBranchName
+  #or
+git push origin :remoteBranchName
+
+
+### For example: delete the remote 'TEST-123' branch
+
+# checkout to another branch first i.e: git checkout dev
 git push origin :TEST-123  #(delete the remote 'TEST-123' branch)
 
 
-# for local 'TEST-123' branch
+### For example: delete local 'TEST-123' branch
 # checkot to another branch first i.e: git checkout dev
 git branch -D TEST-123   #(delete the local 'TEST-123' branch)
 
-After that no local branch nor remote branch named 'TEST-123' will be available anymore
+After that no local branch nor remote branch named 'TEST-123' it will be unavailable!

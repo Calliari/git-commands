@@ -1,0 +1,2 @@
+# discard any new files or directories that you may have added
+git clean -df

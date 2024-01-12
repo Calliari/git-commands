@@ -19,7 +19,7 @@ git tag -a v0.0.1 -m "Tag version v0.0.1, update providers to be version 2.68.0"
 # or
 git tag 0.1
 
-# Check the tag commited
+# Check the tag committed
 git show v0.0.1
 
 # Check the tags created
@@ -29,6 +29,8 @@ git tag
 git push origin v0.0.1 
 # or 
 git push --follow-tags
+# or
+git push --tags --force
 
 ### Now the code has been pushed to a tag 'v0.0.1' is linked to this master commit
 

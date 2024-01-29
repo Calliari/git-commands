@@ -13,3 +13,22 @@ git push origin stage
 git checkout master
 git cherry-pick yrujff56568bdb8f88c557efcb29fca164747y4h
 git push origin master
+
+
+---------------------------------------------------
+
+TEMP_SINGLE_BRANCH="feature/cherry-pick"
+
+git checkout master
+git fetch --all
+git checkout -b $TEMP_SINGLE_BRANCH upstream/master
+
+git cherry-pick 5555555555557efcb29fca164747y4h
+git cherry-pick 9999999999998f88c557efcb29fca16
+git cherry-pick other commits in case needed
+
+git push -u origin $TEMP_SINGLE_BRANCH
+
+#Create the pull request
+
+

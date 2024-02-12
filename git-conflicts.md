@@ -1,6 +1,6 @@
 #### Trying to resolve git merge 'conflicts'
 
-##### Method 1
+##### Method 1, with abort in case thongs go wrong
 ###### Step 1: Checkout the source branch and merge in the changes from the target branch. Resolve conflicts.
 ```
 git checkout development   # in the branch development
@@ -20,7 +20,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 git merge --abort
 ```
-
+<hr/>
 
 ##### Method 2 
 You must resolve the conflicts by manually merging master into this branch. After the conflicts are resolved you will be able to merge the pull request.

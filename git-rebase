@@ -16,8 +16,7 @@ git add app.txt; git commit -m "new code changes on the development branch"
 git checkout master
 git rebase development
 
----------------------
-
+------------------------------------------
 
 If issues arise with a git pull from the main branch because of being behind the feature branch, all it need to do is 
 ```
@@ -31,6 +30,7 @@ git rebase master # from the [development-branch]
 git push --force origin [development-branch]
 # Then it should have all the master commits updated in the [development-branch]
 ```
+------------------------------------------
 
 Roll back the rebase in case needed, (after running the rebase commands to get back on how it was before.)
 ```

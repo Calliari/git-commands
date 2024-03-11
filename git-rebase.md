@@ -4,17 +4,17 @@
 `git checkout -b development master # creating 'development' branch from 'master' branch`
 
 #### Check to the new branch just created 'development'
-git checkout development
+`git checkout development`
 
 #### Add/change file contents on the 'development' branch 
-echo "code 2" >> app.txt
+`echo "code 2" >> app.txt`
 
 #### Add and commit the changes
-git add app.txt; git commit -m "new code changes on the development branch"
+`git add app.txt; git commit -m "new code changes on the development branch"`
 
 #### Now use the git 'rebase' command
-git checkout master
-git rebase development
+`git checkout master`
+`git rebase development`
 
 ------------------------------------------
 
@@ -26,9 +26,12 @@ git checkout [development-branch]
 
 git rebase master # from the [development-branch]
 # Resolve the conflicts generated
+
 git rebase --continue
+
 # git add . # (all files that have been resolved from the merge conflicts)
 git push --force origin [development-branch]
+
 # Then it should have all the master commits updated in the [development-branch]
 ```
 ------------------------------------------

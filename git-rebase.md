@@ -1,20 +1,36 @@
-##### The git 'rebase' and 'merge' is similar
-
-#### Creating a new branch from another
+##### Practise the git 'rebase' 
+#### 1. Creating a new branch from another
 `git checkout -b development master # creating 'development' branch from 'master' branch`
 
-#### Check to the new branch just created 'development'
+#### Checkout to the new branch just created 'development'
 `git checkout development`
 
 #### Add/change file contents on the 'development' branch 
-`echo "code 2" >> app.txt`
+`echo "code 2" >> app2.txt`
 
 #### Add and commit the changes
-`git add app.txt; git commit -m "new code changes on the development branch"`
+`git add app2.txt; git commit -m "new code changes on the development branch"`
+`git push origin development`
+
+
+#### On the master branch, Add the file to the master
+```
+git checkout master
+echo "code 1" >> app.txt
+git add app.txt
+git commit -m "changes to the app.txt file"
+git push origin master
+```
 
 #### Now use the git 'rebase' command
-`git checkout master`
-`git rebase development`
+```
+git checkout development
+git rebase master
+git add .
+git commit -m "Get all changes recently added to the master and rebased/refresh the 'development' branch from master, getting changes made in 'app.txt' file"
+git push origin development # Sometimes needed '--force' flag
+```
+
 
 ------------------------------------------
 

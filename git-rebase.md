@@ -1,7 +1,7 @@
 ##### The git 'rebase' and 'merge' is similar
 
 #### Creating a new branch from another
-git checkout -b development master # creating 'development' branch from 'master' branch 
+`git checkout -b development master # creating 'development' branch from 'master' branch`
 
 #### Check to the new branch just created 'development'
 git checkout development

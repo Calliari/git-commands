@@ -1,24 +1,24 @@
-The git 'rebase' and 'merge' is similar
+##### The git 'rebase' and 'merge' is similar
 
-# creating a new branch from another
+#### Creating a new branch from another
 git checkout -b development master # creating 'development' branch from 'master' branch 
 
-# check to the new branch just created 'development'
+#### Check to the new branch just created 'development'
 git checkout development
 
-# add/change file contents on the 'development' branch 
+#### Add/change file contents on the 'development' branch 
 echo "code 2" >> app.txt
 
-# add and commit the changes
+#### Add and commit the changes
 git add app.txt; git commit -m "new code changes on the development branch"
 
-# Now use the git 'rebase' command
+#### Now use the git 'rebase' command
 git checkout master
 git rebase development
 
 ------------------------------------------
 
-If issues arise with a git pull from the main branch because of being behind the feature branch, all it need to do is 
+#### If issues arise with a git pull from the main branch because of being behind the feature branch, all it need to do is 
 ```
 git checkout master
 git pull origin master
@@ -33,7 +33,7 @@ git push --force origin [development-branch]
 ```
 ------------------------------------------
 
-Roll back the rebase in case needed, (after running the rebase commands to get back on how it was before.)
+#### Roll back the rebase in case needed, (after running the rebase commands to get back on how it was before.)
 ```
 # check the reflog
 git reflog

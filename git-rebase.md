@@ -26,11 +26,12 @@ git push origin master
 ```
 git checkout development
 git rebase master
+# hint: Resolve all conflicts manuall if any
 git add .
+git rebase --continue
 git commit -m "Get all changes recently added to the master and rebased/refresh the 'development' branch from master, getting changes made in 'app.txt' file"
 git push origin development # Sometimes needed '--force' flag
 ```
-
 
 ------------------------------------------
 

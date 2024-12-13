@@ -44,9 +44,9 @@ git checkout [development-branch]
 git rebase master # from the [development-branch]
 # Resolve the conflicts generated
 
-git rebase --continue
-
 # git add . # (all files that have been resolved from the merge conflicts)
+
+git rebase --continue
 git push --force origin [development-branch]
 
 # Then it should have all the master commits updated in the [development-branch]

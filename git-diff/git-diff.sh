@@ -14,7 +14,7 @@ git diff master..     # compare master with current branch (what we have in mast
 git checkout master
 git diff master...feature/branch-123456 -- test-file.txt  
 
-#Testing the merge on local before merge the pull-request (this doesn't affect the remote)
+#Testing the merge on local before merging the pull-request (this doesn't affect the remote)
 ```
 git checkout master
 git checkout master -- .

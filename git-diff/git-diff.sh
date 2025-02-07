@@ -10,6 +10,9 @@ git diff ..master     # compare current branch with 'master'
 git diff dev..master  # compare 'dev' with 'master'
 git diff master..     # compare master with current branch (what we have in master is shown as '-' minus
 
+# the difference code that will be added to the master on this particular file
+git checkout master
+git diff master...feature/branch-123456 -- test-file.txt  
 
 #Testing the merge on local before merge the pull-request (this doesn't affect the remote)
 ```
@@ -26,5 +29,8 @@ git status
 # Here we can see the lines that will be changed on this file in particular and must match the created pull-request difference that will be merged into the master branch.
 git diff --cached test-file.txt  
 
+
+# to go back before the "test merge"
+git merge --abort
 ```
 

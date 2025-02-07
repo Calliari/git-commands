@@ -4,7 +4,7 @@ git diff
 # After 'git add' & 'git commit' CDM
 git diff --cached
 
-# After 'git add' & 'git commit' , comparing branches
+# After 'git add' & 'git commit', comparing branches
 git diff HEAD^ HEAD
 git diff ..master     # compare current branch with 'master'
 git diff dev..master  # compare 'dev' with 'master'
@@ -20,7 +20,7 @@ git checkout master
 git checkout master -- .
 git pull origin master   
 
-# here is the test (merging the fearure branch inot the master branch locally without any interaction with the remote)
+# here is the test (merging the feature branch into the master branch locally without any interaction with the remote)
 git merge --no-commit --no-ff feature/branch-123456
 
 # Here are the files which will be changing with the merge on the remote master branch (but for now its only on the local-machine)

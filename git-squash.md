@@ -32,5 +32,5 @@ git log -2
 
 6. Push the squashed commits to the remote, may need the "-f" to force the push
 ```
-git push --force-with-lease
+git push origin BRANCH_NAME --force-with-lease
 ```

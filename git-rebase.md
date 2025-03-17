@@ -30,6 +30,14 @@ git rebase master
 git add .
 git commit -m "Get all changes recently added to the master and rebased/refresh the 'development' branch from master, getting changes made in 'app.txt' file"
 git rebase --continue
+
+
+###check the changes before push back to the master branch after the rebase and fix the conflicts
+git diff master... -- FILE_1 FILE_2.txt FILE_3.text
+Or
+git diff master...BRANCH_development -- FILE_1 FILE_2.txt FILE_3.text 
+
+
 git push origin development # Sometimes needed '--force' flag
 ```
 

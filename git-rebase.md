@@ -26,13 +26,13 @@ git push origin master
 ```
 git checkout development
 git rebase master
-# hint: Resolve all conflicts manuall if any
+# hint: Resolve all conflicts manually if any
 git add .
 git commit -m "Get all changes recently added to the master and rebased/refresh the 'development' branch from master, getting changes made in 'app.txt' file"
 git rebase --continue
 
 
-###check the changes before push back to the master branch after the rebase and fix the conflicts
+###check the changes before pushing back to the master branch after the rebase and fix the conflicts
 git diff master... -- FILE_1 FILE_2.txt FILE_3.text
 Or
 git diff master...BRANCH_development -- FILE_1 FILE_2.txt FILE_3.text 
@@ -74,7 +74,7 @@ git reset --hard ORIG_HEAD
 # get back to master
 git checkout master
 
-# get to the [development-branch], everything should be as it were before the 'git rebase master' command.
+# get to the [development-branch], everything should be as it was before the 'git rebase master' command.
 git checkout [development-branch]
 ```
 

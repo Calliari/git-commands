@@ -38,7 +38,7 @@ Or
 git diff master...BRANCH_development -- FILE_1 FILE_2.txt FILE_3.text 
 
 
-git push origin development # Sometimes needed '--force' flag
+git push origin development # Sometimes needed '--force-with-lease' flag or '--force' flag
 ```
 
 ------------------------------------------

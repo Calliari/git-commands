@@ -2,7 +2,8 @@
 git checkout master
 git checkout feature/branch-001 # (push the changes, create the pull-request for a future merge)
 
-git checkout -b feature/branch-001-rollback
+# create a rollback branch from "feature/branch-001"
+git checkout -b feature/branch-001-rollback feature/branch-001
 git log -p -1 
 git revert ******5158297b45****
 git push origin feature/branch-001-rollback # (from this step create a rollback pull-request, this will get the files back if the merge has heppened on the branch "feature/branch-001")

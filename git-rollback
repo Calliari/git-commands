@@ -1,0 +1,8 @@
+# This is a good practise to create a rollback branch in case need - worked really when when the the merged has happned from the "feature/branch-001" branch
+git checkout master
+git checkout feature/branch-001 # (push the changes, create the pull-request for a future merge)
+
+git checkout -b feature/branch-001-rollback
+git log -p -1 
+git revert ******5158297b45****
+git push origin feature/branch-001-rollback # (from this step create a rollback pull-request, this will get the files back if the merge has heppened on the branch "feature/branch-001")

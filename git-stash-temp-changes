@@ -10,7 +10,7 @@ git stash save “Your stash message”.
 git stash
 git stash list
 git stash show stash@{0}
-git stash show -p
+git stash show -p stash@{0}
 
 
 ##Creating a Branch from a Stash
